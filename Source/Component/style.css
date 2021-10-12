@@ -1,0 +1,11 @@
+.card:hover {
+    box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
+}
+
+.card a {
+    color: black;
+}
+
+.card a:focus {
+    color: rgb(14, 240, 14);
+}
