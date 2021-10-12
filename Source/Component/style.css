@@ -9,3 +9,7 @@
 .card a:focus {
     color: rgb(14, 240, 14);
 }
+
+.card a:hover {
+    color: rgb(14, 240, 14);
+}
