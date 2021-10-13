@@ -13,3 +13,20 @@
 .card a:hover {
     color: rgb(14, 240, 14);
 }
+
+.services a {
+    color: rgb(14, 240, 14);
+}
+
+#class {
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    #class {
+        display: block;
+    }
+    .class {
+        display: none;
+    }
+}

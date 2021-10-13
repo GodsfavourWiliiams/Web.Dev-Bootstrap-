@@ -19,12 +19,10 @@
 </head>
 
 <body>
+    <img src="/Source/Assets/images/Ellipse 3.svg" class="position-absolute" alt="">
     <!-- NAVBAR -->
     <div class="bg-light vh-100 mb-5">
-        <nav class="navbar pt-3 px-5 mb-5 ">
-            <div class="">
-                <img src="/Source/Assets/images/Web.Dev.logo.svg" alt="">
-            </div>
+        <!-- <div class="collapse" id="navbarToggleExternalContent">
             <div class="">
                 <a href=" " class="text-decoration-none text-dark m-4 ">Home</a>
                 <a href=" " class="text-decoration-none text-dark m-4">About</a>
@@ -33,6 +31,27 @@
                 <a href=" " class="text-decoration-none text-dark m-3 ">Sign in</a>
                 <a href="#"><button type="button " class="btn btn-success px-4 py-2">Sign up</button></a>
             </div>
+        </div> -->
+        <nav class="navbar pt-3 px-5 mb-5 ">
+
+            <div class="">
+                <img src="/Source/Assets/images/Web.Dev.logo.svg" alt="">
+            </div>
+            <div class="class">
+                <a href=" " class="text-decoration-none text-dark m-4 ">Home</a>
+                <a href=" " class="text-decoration-none text-dark m-4">About</a>
+                <a href=" " class="text-decoration-none text-dark m-4">Testimonials</a>
+                <a href=" " class="text-decoration-none text-dark m-4">Contact</a>
+                <a href=" " class="text-decoration-none text-dark m-3 ">Sign in</a>
+                <a href="#"><button type="button " class="btn btn-success px-4 py-2">Sign up</button></a>
+            </div>
+            <nav class="navbar navbar-dark bg-dark" id="class">
+                <div class="">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+            </nav>
         </nav>
         <!--FIRST SECTION  -->
         <div class="contain d-flex text-center">
@@ -131,40 +150,44 @@
         </div>
         <a href=" "><button type="button " class="btn btn-success px-5 py-2">Learn More</button></a>
     </div>
-    <div class=" container ">
+    <div class=" container text-center my-5">
         <p class=" ">Our Work</p>
         <h2 class=" ">Our Portfolio</h2>
-        <div class=" d-flex">
-            <div class=" ">
-                <img src="/Source/Assets/images/fashonlanding page.svg " alt=" ">
+        <div class="services d-flex justify-content-center gap-5 my-5">
+            <div class="">
                 <div class=" ">
-                    <p class=" ">Fashion Landing page</p>
-                    <a href=" ">View Details</a>
+                    <img src="/Source/Assets/images/fashonlanding page.svg " alt=" ">
+                    <div class=" d-flex justify-content-between my-3">
+                        <p class=" ">Fashion Landing page</p>
+                        <a href=" ">View Details</a>
+                    </div>
+                </div>
+                <div class=" ">
+                    <img src="/Source/Assets/images/health.svg " alt=" ">
+                    <div class="d-flex justify-content-between my-3">
+                        <p class=" ">Health and Fitness</p>
+                        <a href=" ">View Details</a>
+                    </div>
                 </div>
             </div>
-            <div class=" ">
-                <img src="/Source/Assets/images/health.svg " alt=" ">
+            <div class="my-5">
                 <div class=" ">
-                    <p class=" ">Health and Fitness</p>
-                    <a href=" ">View Details</a>
+                    <img src="/Source/Assets/images/it solution.svg " alt=" ">
+                    <div class=" d-flex justify-content-between my-3">
+                        <p class=" ">Furniture Shop</p>
+                        <a href=" ">View Details</a>
+                    </div>
                 </div>
-            </div>
-            <div class=" ">
-                <img src="/Source/Assets/images/furniture.jpg " alt=" ">
                 <div class=" ">
-                    <p class=" ">Furniture Shop</p>
-                    <a href=" ">View Details</a>
-                </div>
-            </div>
-            <div class=" ">
-                <img src="/Source/Assets/images/it solution.svg " alt=" ">
-                <div class=" ">
-                    <p class=" ">IT Solution Provider</p>
-                    <a href=" ">Veiw Details</a>
+                    <img src="/Source/Assets/images/it solution.svg " alt=" ">
+                    <div class=" d-flex justify-content-between my-3">
+                        <p class=" ">IT Solution Provider</p>
+                        <a href=" ">Veiw Details</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="btn btn-success ">All Projects</button>
+        <button class="btn btn-success px-5 ">All Projects</button>
     </div>
 
     <!-- section 3 for carosel -->
@@ -191,9 +214,10 @@
                 <img src="/Source/Assets/images/Review.svg " alt=" ">
                 <h6>Sabo Masties</h6>
             </div>
-
         </div>
-
+        <div class="container">
+            <input type="checkbox" name="" id="">
+        </div>
     </div>
 </body>
 <!-- Option 1: Bootstrap Bundle with Popper -->
