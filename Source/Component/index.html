@@ -21,8 +21,8 @@
 <body>
     <img src="/Source/Assets/images/Ellipse 3.svg" class="position-absolute" alt="">
     <!-- NAVBAR -->
-    <div class="bg-light vh-100 mb-5">
-        <nav class="navbar navbar-expand-lg navbar-light pt-3 px-5 mb-5 ">
+    <div class="hero vh-100 mb-5">
+        <nav class="navbar navbar-expand-lg pt-3 px-5 mb-5 ">
             <div class="container-fluid">
                 <div class="">
                     <img src="/Source/Assets/images/Web.Dev.logo.svg" alt="">
@@ -32,7 +32,7 @@
               </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2"> </ul>
-                    <form class="navbar-nav d-flex align-items-center">
+                    <form class="navbar-nav d-flex align-items-center text-center">
                         <a href=" " class="text-decoration-none text-dark m-4 ">Home</a>
                         <a href=" " class="text-decoration-none text-dark m-4">About</a>
                         <a href=" " class="text-decoration-none text-dark m-4">Testimonials</a>
@@ -182,33 +182,52 @@
 
     <!-- section 3 for carosel -->
 
-    <div class="parent div ">
+    <div class="text-center ">
         <p class=" ">Testimonials</p>
         <h3>What Customers Say</h3>
-        <div class="carousel ">
-            <div class=" ">
+        <div class="parent w-50 m-auto"></div>
+        <div class="testimonials d-flex w-75 m-auto ">
+            <div class="bg-body p-3 rounded">
                 <h6 class=" ">Superb Work!</h6>
                 <p class=" ">“Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.”</p>
                 <img src="/Source/Assets/images/Review.svg " alt=" ">
                 <h6>Sabo Masties</h6>
             </div>
-            <div class=" ">
+            <div class="bg-body p-3 rounded">
                 <h6 class=" ">Superb Work!</h6>
                 <p class=" ">“Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.”</p>
                 <img src="/Source/Assets/images/Review.svg " alt=" ">
                 <h6>Sabo Masties</h6>
             </div>
-            <div class=" ">
+            <div class=" bg-body p-3 rounded">
                 <h6 class=" ">Superb Work!</h6>
                 <p class=" ">“Blessing welcomed ladyship she met humoured sir breeding her. Six curiosity day assurance bed necessary.”</p>
                 <img src="/Source/Assets/images/Review.svg " alt=" ">
                 <h6>Sabo Masties</h6>
             </div>
-        </div>
-        <div class="container">
-            <input type="checkbox" name="" id="">
         </div>
     </div>
+    <div class="container">
+        <input type="checkbox" name="" id="">
+    </div>
+    </div>
+
+
+
+    <div id="" class=" d-flex m-auto text-center d-flex row" data-bs-ride="carousel">
+
+        <button class="carousel-control-prev bg-info" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next bg-info" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
 </body>
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>

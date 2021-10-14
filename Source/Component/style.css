@@ -1,32 +1,39 @@
-.card:hover {
-    box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
-}
-
-.card a {
-    color: black;
-}
-
-.card a:focus {
-    color: rgb(14, 240, 14);
-}
-
-.card a:hover {
-    color: rgb(14, 240, 14);
-}
-
-.services a {
-    color: rgb(14, 240, 14);
-}
-
-#class {
-    display: none;
-}
-
-@media only screen and (max-width:768px) {
-    #class {
-        display: block;
-    }
-    .class {
-        display: none;
-    }
-}
+        body {}
+        
+        .card:hover {
+            box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
+        }
+        
+        .card a {
+            color: black;
+        }
+        
+        .card a:focus {
+            color: rgb(14, 240, 14);
+        }
+        
+        .card a:hover {
+            color: rgb(14, 240, 14);
+        }
+        
+        .services a {
+            color: rgb(14, 240, 14);
+        }
+        
+        .hero {
+            background-color: #F2F2F2;
+        }
+        
+        .parent {
+            height: 30em;
+            background-color: #F2F2F2;
+        }
+        
+        .testimonials {
+            box-shadow: 0 25px 50px -10px rgb(221, 216, 216);
+            position: relative;
+            top: -22em;
+            gap: 30px;
+        }
+        
+        @media only screen and (max-width:768px) {}
