@@ -1,87 +1,98 @@
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    .card:hover {
-        box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
-    }
-    
-    .card a {
-        color: black;
-    }
-    
-    .card a:focus {
-        color: rgb(14, 240, 14);
-    }
-    
-    .card a:hover {
-        color: rgb(14, 240, 14);
-    }
-    
-    .services a {
-        color: rgb(14, 240, 14);
-    }
-    
-    .hero {
-        background-color: #F2F2F2;
-    }
-    
-    .parent {
-        height: 30em;
-        background-color: #F2F2F2;
-    }
-    
-    .testimonials {
-        box-shadow: 0 25px 50px -10px rgb(221, 216, 216);
-        position: relative;
-        top: -22em;
-        gap: 30px;
-    }
-    
-    .toggle {
-        --width: 100px;
-        --height: calc(var(--width) / 2);
-        --border-radius: calc(var(--height) / 2);
-        display: inline-block;
-        cursor: pointer;
-        position: relative;
-        top: -18em;
-    }
-    
-    .toggle__input {
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
+}
+
+.card a {
+    color: black;
+}
+
+.card a:focus {
+    color: rgb(14, 240, 14);
+}
+
+.card a:hover {
+    color: rgb(14, 240, 14);
+}
+
+.services a {
+    color: rgb(14, 240, 14);
+}
+
+.hero {
+    background-color: #F2F2F2;
+}
+
+.parent {
+    height: 30em;
+    background-color: #F2F2F2;
+}
+
+.services {
+    display: flex;
+}
+
+.testimonials {
+    box-shadow: 0 25px 50px -10px rgb(221, 216, 216);
+    position: relative;
+    top: -22em;
+    gap: 30px;
+}
+
+.toggle {
+    --width: 100px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height) / 2);
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: -18em;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill {
+    background: #009578;
+}
+
+.toggle__fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill::after {
+    transform: translateX(var(--height));
+}
+
+@media only screen and (max-width:768px) {
+    .images {
         display: none;
     }
-    
-    .toggle__fill {
-        position: relative;
-        width: var(--width);
-        height: var(--height);
-        border-radius: var(--border-radius);
-        background: #dddddd;
-        transition: background 0.2s;
+    .services {
+        display: block;
     }
-    
-    .toggle__input:checked~.toggle__fill {
-        background: #009578;
-    }
-    
-    .toggle__fill::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: var(--height);
-        width: var(--height);
-        background: #ffffff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-        border-radius: var(--border-radius);
-        transition: transform 0.2s;
-    }
-    
-    .toggle__input:checked~.toggle__fill::after {
-        transform: translateX(var(--height));
-    }
-    
-    @media only screen and (max-width:768px) {}
+}
