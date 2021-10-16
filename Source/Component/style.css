@@ -45,13 +45,14 @@ body {
 }
 
 .toggle {
-    --width: 100px;
+    --width: 120px;
     --height: calc(var(--width) / 2);
     --border-radius: calc(var(--height) / 2);
     display: inline-block;
     cursor: pointer;
     position: relative;
-    top: -18em;
+    top: -20em;
+    text-align: center;
 }
 
 .toggle__input {
@@ -63,29 +64,29 @@ body {
     width: var(--width);
     height: var(--height);
     border-radius: var(--border-radius);
-    background: #dddddd;
+    background: #ffffff;
     transition: background 0.2s;
-}
-
-.toggle__input:checked~.toggle__fill {
-    background: #009578;
+    background-image: url(/Source/Assets/images/Icon\ backward.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 15px;
 }
 
 .toggle__fill::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    height: var(--height);
-    width: var(--height);
-    background: #ffffff;
+    top: 7px;
+    right: 10px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #000000;
+    background-image: url(/Source/Assets/images/Icon\ foward.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     border-radius: var(--border-radius);
     transition: transform 0.2s;
-}
-
-.toggle__input:checked~.toggle__fill::after {
-    transform: translateX(var(--height));
 }
 
 @media only screen and (max-width:768px) {
