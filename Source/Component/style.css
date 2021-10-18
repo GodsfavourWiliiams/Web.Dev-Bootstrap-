@@ -4,7 +4,8 @@ body {
     box-sizing: border-box;
 }
 
-.card:hover {
+.card:hover,
+.business:hover {
     box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
 }
 
