@@ -1,6 +1,28 @@
-let email = document.getElementById('email');
+const gap = 16;
 
-function validates() {
-    console.log(email.value)
-    alert('Thanks! you will receive a feedback from us')
-}
+const carousel = document.getElementById("carousel"),
+    content = document.getElementById("content"),
+    next = document.getElementById("myToggle"),
+    prev = document.getElementById("prev");
+
+next.addEventListener("click", e => {
+    carousel.scrollBy(width + gap, 0);
+    if (carousel.scrollWidth !== 0) {
+        prev.style.display = "flex";
+    }
+    if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+        next.style.display = "none";
+    }
+});
+prev.addEventListener("click", e => {
+    carousel.scrollBy(-(width + gap), 0);
+    if (carousel.scrollLeft - width - gap <= 0) {
+        prev.style.display = "none";
+    }
+    if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+        next.style.display = "flex";
+    }
+});
+
+let width = carousel.offsetWidth;
+window.addEventListener("resize", e => (width = carousel.offsetWidth));

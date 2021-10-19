@@ -38,13 +38,6 @@ body {
     display: flex;
 }
 
-.testimonials {
-    box-shadow: 0 25px 50px -10px rgb(221, 216, 216);
-    position: relative;
-    top: -22em;
-    gap: 30px;
-}
-
 .toggle {
     --width: 120px;
     --height: calc(var(--width) / 2);
@@ -58,6 +51,9 @@ body {
 
 .toggle__input {
     display: none;
+    opacity: 0;
+    position: absolute;
+    top: 1em;
 }
 
 .toggle__fill {
@@ -67,10 +63,6 @@ body {
     border-radius: var(--border-radius);
     background: #ffffff;
     transition: background 0.2s;
-    background-image: url(/Source/Assets/images/Icon\ backward.svg);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-position-x: 15px;
 }
 
 .toggle__fill::after {
@@ -97,4 +89,77 @@ body {
     .services {
         display: block;
     }
+}
+
+.section-4 {
+    position: relative;
+    top: 7em;
+}
+
+.carousel-body {
+    margin: 0;
+    display: flex;
+    position: relative;
+    top: -22em;
+    gap: 30px;
+    box-shadow: 0 25px 50px -10px rgb(221, 216, 216);
+    width: 1090px;
+    margin: auto;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1090px;
+    position: relative;
+}
+
+#carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+    height: 0;
+}
+
+#prev {
+    top: 50%;
+    left: -12px;
+    transform: translate(50%, -50%);
+    display: none;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    background: white;
+    background-image: url(/Source/Assets/images/Icon\ backward.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--border-radius);
+}
+
+#next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+#content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.item {
+    width: 350px;
+    height: 230px;
+    background: white;
+}
+
+#Toggle-section {
+    background-color: #000000;
+    border-radius: 20%;
+    width: 100px;
 }
