@@ -4,6 +4,36 @@ body {
     box-sizing: border-box;
 }
 
+.images-one {
+    position: relative;
+    animation: imageOneMove 5s;
+    overflow: hidden
+}
+
+.images-two {
+    position: relative;
+    animation: imageTwoMove 5s;
+    overflow: hidden;
+}
+
+@keyframes imageOneMove {
+    from {
+        left: 3000px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes imageTwoMove {
+    from {
+        right: 3000px;
+    }
+    to {
+        right: 0px;
+    }
+}
+
 .card:hover,
 .business:hover {
     box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
@@ -52,8 +82,6 @@ body {
 .toggle__input {
     display: none;
     opacity: 0;
-    position: absolute;
-    top: 1em;
 }
 
 .toggle__fill {

@@ -1,3 +1,21 @@
+var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
+
+TweenMax.from(".juice", 1, {
+    delay: 2,
+    opacity: 0,
+    y: -800,
+    ease: Expo.easeInOut
+});
+TweenMax.from(".logo", 1, {
+    opacity: 0,
+    x: -20,
+    ease: Expo.easeInOut
+});
+
+
+
+
 const gap = 16;
 
 const carousel = document.getElementById("carousel"),
@@ -24,5 +42,5 @@ prev.addEventListener("click", e => {
     }
 });
 
-let width = carousel.offsetWidth;
+var width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
