@@ -1,193 +1,224 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.images-one {
-    position: relative;
-    animation: imageOneMove 5s;
-    overflow: hidden
-}
-
-.images-two {
-    position: relative;
-    animation: imageTwoMove 5s;
-    overflow: hidden;
-}
-
-@keyframes imageOneMove {
-    from {
-        left: 3000px;
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    to {
-        left: 0px;
-    }
-}
-
-@keyframes imageTwoMove {
-    from {
-        right: 3000px;
-    }
-    to {
-        right: 0px;
-    }
-}
-
-.card:hover,
-.business:hover {
-    box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
-}
-
-.card a {
-    color: black;
-}
-
-.card a:focus {
-    color: rgb(14, 240, 14);
-}
-
-.card a:hover {
-    color: rgb(14, 240, 14);
-}
-
-.services a {
-    color: rgb(14, 240, 14);
-}
-
-.hero {
-    background-color: #F2F2F2;
-}
-
-.parent {
-    height: 30em;
-    background-color: #F2F2F2;
-}
-
-.services {
-    display: flex;
-}
-
-.toggle {
-    --width: 120px;
-    --height: calc(var(--width) / 2);
-    --border-radius: calc(var(--height) / 2);
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    top: -20em;
-    text-align: center;
-}
-
-.toggle__input {
-    display: none;
-    opacity: 0;
-}
-
-.toggle__fill {
-    position: relative;
-    width: var(--width);
-    height: var(--height);
-    border-radius: var(--border-radius);
-    background: #ffffff;
-    transition: background 0.2s;
-}
-
-.toggle__fill::after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    right: 10px;
-    height: 45px;
-    width: 45px;
-    text-align: center;
-    background: #000000;
-    background-image: url(/Source/Assets/images/Icon\ foward.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    border-radius: var(--border-radius);
-    transition: transform 0.2s;
-}
-
-@media only screen and (max-width:768px) {
-    .images {
+    /* #modal {
         display: none;
+        position: absolute;
+        background-color: #49AD09;
     }
+     */
+    
+    .images-one {
+        position: relative;
+        animation: imageOneMove 5s;
+    }
+    
+    .images-two {
+        position: relative;
+        animation: imageTwoMove 5s;
+    }
+    
+    @keyframes imageOneMove {
+        from {
+            bottom: 3000px;
+        }
+        to {
+            bottom: 0px;
+        }
+    }
+    
+    @keyframes imageTwoMove {
+        from {
+            bottom: 3000px;
+        }
+        to {
+            bottom: 0px;
+        }
+    }
+    
+    .card:hover,
+    .business:hover {
+        box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
+    }
+    
+    .btn-business {
+        margin: 30px 0px 10px 0px;
+        background-color: transparent;
+    }
+    
+    .btn-business-three {
+        margin: 80px 0px 10px 0px;
+    }
+    
+    .btn-business:hover {
+        background-color: #49AD09;
+        color: hsl(0, 0%, 100%);
+        border: none;
+    }
+    
+    .button {
+        background-color: #49AD09;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 20px 25px 5px #dad8d8;
+    }
+    
+    input {
+        outline: none;
+    }
+    
+    .card a {
+        color: black;
+    }
+    
+    .card a:focus {
+        color: rgb(14, 240, 14);
+    }
+    
+    .card a:hover {
+        color: rgb(14, 240, 14);
+    }
+    
+    .services a {
+        color: rgb(14, 240, 14);
+    }
+    
+    .hero {
+        background-color: #F2F2F2;
+    }
+    
+    .parent {
+        height: 30em;
+        background-color: #F2F2F2;
+    }
+    
     .services {
-        display: block;
+        display: flex;
     }
-}
-
-.section-4 {
-    position: relative;
-    top: 7em;
-}
-
-.carousel-body {
-    margin: 0;
-    display: flex;
-    position: relative;
-    top: -22em;
-    gap: 30px;
-    box-shadow: 0 25px 50px -10px rgb(221, 216, 216);
-    width: 1090px;
-    margin: auto;
-}
-
-#wrapper {
-    width: 100%;
-    max-width: 1090px;
-    position: relative;
-}
-
-#carousel {
-    overflow: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-}
-
-#carousel::-webkit-scrollbar {
-    height: 0;
-}
-
-#prev {
-    top: 50%;
-    left: -12px;
-    transform: translate(50%, -50%);
-    display: none;
-    position: absolute;
-    height: 45px;
-    width: 45px;
-    background: white;
-    background-image: url(/Source/Assets/images/Icon\ backward.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: var(--border-radius);
-}
-
-#next {
-    top: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
-}
-
-#content {
-    display: grid;
-    grid-gap: 16px;
-    grid-auto-flow: column;
-    margin: auto;
-    box-sizing: border-box;
-}
-
-.item {
-    width: 350px;
-    height: 230px;
-    background: white;
-}
-
-#Toggle-section {
-    background-color: #000000;
-    border-radius: 20%;
-    width: 100px;
-}
+    
+    .toggle {
+        --width: 120px;
+        --height: calc(var(--width) / 2);
+        --border-radius: calc(var(--height) / 2);
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        top: -20em;
+        text-align: center;
+    }
+    
+    .toggle__input {
+        display: none;
+        opacity: 0;
+    }
+    
+    .toggle__fill {
+        position: relative;
+        width: var(--width);
+        height: var(--height);
+        border-radius: var(--border-radius);
+        background: #ffffff;
+        transition: background 0.2s;
+    }
+    
+    .toggle__fill::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        background: #000000;
+        background-image: url(/Source/Assets/images/Icon\ foward.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        border-radius: var(--border-radius);
+        transition: transform 0.2s;
+    }
+    
+    @media only screen and (max-width:768px) {
+        .images {
+            display: none;
+        }
+        .services {
+            display: block;
+        }
+    }
+    
+    .section-4 {
+        position: relative;
+        top: 7em;
+    }
+    
+    .carousel-body {
+        margin: 0;
+        display: flex;
+        position: relative;
+        top: -22em;
+        gap: 30px;
+        box-shadow: 0 25px 50px -10px rgb(221, 216, 216);
+        width: 1090px;
+        margin: auto;
+    }
+    
+    #wrapper {
+        width: 100%;
+        max-width: 1090px;
+        position: relative;
+    }
+    
+    #carousel {
+        overflow: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    
+    #carousel::-webkit-scrollbar {
+        height: 0;
+    }
+    
+    #prev {
+        top: 50%;
+        left: -12px;
+        transform: translate(50%, -50%);
+        display: none;
+        position: absolute;
+        height: 45px;
+        width: 45px;
+        background: white;
+        background-image: url(/Source/Assets/images/Icon\ backward.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: var(--border-radius);
+    }
+    
+    #next {
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+    
+    #content {
+        display: grid;
+        grid-gap: 16px;
+        grid-auto-flow: column;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    
+    .item {
+        width: 350px;
+        height: 230px;
+        background: white;
+    }
+    
+    #Toggle-section {
+        background-color: #000000;
+        border-radius: 20%;
+        width: 100px;
+    }
