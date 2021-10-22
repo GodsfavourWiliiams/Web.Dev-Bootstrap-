@@ -3,12 +3,6 @@
         padding: 0;
         box-sizing: border-box;
     }
-    /* #modal {
-        display: none;
-        position: absolute;
-        background-color: #49AD09;
-    }
-     */
     
     .images-one {
         position: relative;
@@ -141,14 +135,35 @@
         transition: transform 0.2s;
     }
     
-    @media only screen and (max-width:768px) {
+    @media only screen and (max-width:769px) {
         .images {
             display: none;
         }
         .services {
             display: block;
         }
+        .Policy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .business {
+            width: 350px;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
     }
+    
+    @media only screen and (max-width:750px) {}
     
     .section-4 {
         position: relative;

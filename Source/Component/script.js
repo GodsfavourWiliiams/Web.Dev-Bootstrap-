@@ -4,7 +4,9 @@ const carousel = document.getElementById("carousel"),
     content = document.getElementById("content"),
     next = document.getElementById("myToggle"),
     prev = document.getElementById("prev");
-const modal = document.getElementById('modal');
+var randomArray = ["Lorem ipsum dolor sit,", "Amet consectetur adipisicing elit", "Iste, vitae", "lets practice some code"];
+var contentOne = document.getElementById("content-one");
+var contentTwo = document.getElementById("content-two");
 
 next.addEventListener("click", e => {
     carousel.scrollBy(width + gap, 0);
@@ -25,8 +27,12 @@ prev.addEventListener("click", e => {
     }
 });
 
-function readMore() {
-    modal.style.display = "block";
-}
+
 var width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+function clicked() {
+    // var randoms = randomArray[]
+    contentOne.innerHTML = randomArray[0]
+    contentTwo.innerHTML = randomArray[2]
+}
