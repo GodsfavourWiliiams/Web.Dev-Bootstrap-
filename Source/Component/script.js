@@ -59,8 +59,8 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
     /*Active link*/
-    navLink.forEach(n => n.classList.remove('active'));
-    this.classList.add('active');
+    navLink.forEach(n => n.classList.remove('actives'));
+    this.classList.add('actives');
 
     /*Remove menu mobile*/
     const navMenu = document.getElementById('nav-menu')

@@ -354,7 +354,7 @@
         background-color: #49AD09;
     }
     
-    .active::after {
+    .actives::after {
         position: absolute;
         content: "";
         width: 100%;
