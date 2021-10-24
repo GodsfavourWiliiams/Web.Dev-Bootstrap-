@@ -377,6 +377,7 @@
             display: flex;
             padding-top: 0;
             align-items: center;
+            text-align: center;
         }
         .nav__item {
             margin-left: var(--mb-6);
@@ -388,4 +389,43 @@
         .nav__link {
             color: var(--second-color);
         }
+    }
+    
+    #navMenu.active {
+        margin-top: 1em;
+    }
+    
+    #navMenu>span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 9999px;
+        background-color: #000000;
+    }
+    
+    #navMenu>span:not(:last-child) {
+        margin-bottom: 7px;
+    }
+    
+    #navMenu,
+    #navMenu>span {
+        transition: all .4s ease-in-out;
+    }
+    
+    #navMenu.active {
+        transition-delay: 0.8s;
+        transform: rotate(45deg);
+    }
+    
+    #navMenu.active>span:nth-child(2) {
+        width: 0;
+    }
+    
+    #navMenu.active>span:nth-child(1),
+    #navMenu.active>span:nth-child(3) {
+        transition-delay: .4s;
+    }
+    
+    #navMenu.active>span:nth-child(3) {
+        transform: translateY(-19px)rotate(90deg);
     }

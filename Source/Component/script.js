@@ -1,4 +1,11 @@
 const gap = 16;
+const navMenu = document.querySelector("#navMenu");
+
+
+navMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
 
 const carousel = document.getElementById("carousel"),
     content = document.getElementById("content"),
