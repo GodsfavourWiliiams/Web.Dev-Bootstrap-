@@ -1,5 +1,8 @@
 const gap = 16;
 const navMenu = document.querySelector("#navMenu");
+const Slider = document.querySelector(".slider");
+const Btns = document.querySelectorAll(".btn");
+const slideImgs = document.querySelectorAll(".img");
 
 
 navMenu.addEventListener("click", () => {
@@ -7,29 +10,46 @@ navMenu.addEventListener("click", () => {
 });
 
 
-const carousel = document.getElementById("carousel"),
-    content = document.getElementById("content"),
-    next = document.getElementById("myToggle"),
-    prev = document.getElementById("prev");
 
-next.addEventListener("click", e => {
-    carousel.scrollBy(width + gap, 0);
-    if (carousel.scrollWidth !== 0) {
-        prev.style.display = "flex";
+
+let index = 1;
+let imgWidth = slideImgs[index].clientWidth;
+
+window.addEventListener('resize', () => {
+    imgWidth = slideImgs[index].clientWidth;
+})
+
+function slide() {
+    Slider.style.transition = 'transform .5s ease-in-out';
+    Slider.style.transform = 'translateX(' + (-imgWidth * index) + 'px)';
+}
+
+function btnClick() {
+    if (this.id === 'prev') {
+        index--;
+    } else {
+        index++;
     }
-    if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-        next.style.display = "none";
+    this.disabled = true
+    slide();
+}
+
+Slider.addEventListener('transitionend', () => {
+
+    if (slideImgs[index].id === 'first') {
+        Slider.style.transition = 'none';
+        index = slideImgs.length - 1;
+        Slider.style.transform = 'translateX(' + (-imgWidth * index) + 'px)';
+    } else if (slideImgs[index].id === 'last') {
+        Slider.style.transition = 'none';
+        index = 1;
+        Slider.style.transform = 'translateX(' + (-imgWidth * index) + 'px)';
     }
-});
-prev.addEventListener("click", e => {
-    carousel.scrollBy(-(width + gap), 0);
-    if (carousel.scrollLeft - width - gap <= 0) {
-        prev.style.display = "none";
-    }
-    if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-        next.style.display = "flex";
-    }
-});
+    Btns[0].disabled = false
+    Btns[1].disabled = false
+})
+
+Btns.forEach(btn => btn.addEventListener('click', btnClick));
 
 
 var width = carousel.offsetWidth;
@@ -67,11 +87,3 @@ function linkAction() {
     navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
-
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-});
