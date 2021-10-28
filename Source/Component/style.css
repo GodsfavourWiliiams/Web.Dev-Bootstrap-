@@ -1,536 +1,809 @@
-                        html {
-                            scroll-behavior: smooth;
-                        }
-                        
-                        body {
-                            margin: 0;
-                            padding: 0;
-                            box-sizing: border-box;
-                        }
-                        
-                        .night {
-                            display: none;
-                            /* Hidden by default */
-                            position: fixed;
-                            /* Stay in place */
-                            z-index: 999;
-                            /* Sit on top */
-                            padding-top: 100px;
-                            /* Location of the box */
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            /* Full width */
-                            height: 100%;
-                            /* Full height */
-                            overflow: auto;
-                            /* Enable scroll if needed */
-                            background-color: rgb(0, 0, 0);
-                            /* Fallback color */
-                            background-color: rgba(0, 0, 0, 0.4);
-                            /* Black w/ opacity */
-                        }
-                        /* Modal Content */
-                        
-                        .content {
-                            background-color: #fefefe;
-                            margin: auto;
-                            padding: 20px;
-                            border: 1px solid #888;
-                            border-radius: 5px;
-                            width: 350px;
-                            height: 500px;
-                        }
-                        
-                        .morning {
-                            display: flex;
-                            justify-content: space-between;
-                        }
-                        /* The Close Button */
-                        
-                        .blah {
-                            color: #aaaaaa;
-                            font-size: 30px;
-                            font-weight: bold;
-                            position: relative;
-                            top: -10px;
-                        }
-                        
-                        .blah:hover,
-                        .blah:focus {
-                            color: #000;
-                            text-decoration: none;
-                            cursor: pointer;
-                        }
-                        /* Full-width input fields */
-                        
-                        .form-container input[type=text],
-                        .form-container input[type=password] {
-                            width: 100%;
-                            padding: 15px;
-                            margin: 5px 0 22px 0;
-                            border: none;
-                            background: #f1f1f1;
-                        }
-                        /* When the inputs get focus, do something */
-                        
-                        .form-container input[type=text]:focus,
-                        .form-container input[type=password]:focus {
-                            background-color: #ddd;
-                            outline: none;
-                        }
-                        /* Set a style for the submit/login button */
-                        
-                        .form-container .btn {
-                            background-color: #04AA6D;
-                            color: white;
-                            padding: 10px 16px;
-                            border: none;
-                            cursor: pointer;
-                            width: 100%;
-                            position: relative;
-                            top: 250px;
-                            margin-bottom: 10px;
-                            opacity: 0.8;
-                        }
-                        /* Add a red background color to the cancel button */
-                        
-                        .form-container .cancel {
-                            background-color: red;
-                        }
-                        /* Add some hover effects to buttons */
-                        
-                        .form-container .btn:hover,
-                        .open-button:hover {
-                            opacity: 1;
-                        }
-                        
-                        .partners {
-                            display: grid;
-                            grid-template-columns: repeat(5, 22%);
-                            width: 1200px;
-                            margin: 200px auto;
-                        }
-                        
-                        @media screen and (max-width: 1305px) {
-                            .partners {
-                                display: grid;
-                                grid-template-columns: repeat(5, 23%);
-                                margin: 200px auto;
-                                width: 1000px;
+                            html {
+                                scroll-behavior: smooth;
                             }
-                        }
-                        
-                        @media screen and (max-width: 1100px) {
-                            .partners {
-                                display: grid;
-                                grid-template-columns: repeat(5, 23%);
-                                margin: 200px auto;
-                                width: 800px;
+                            
+                            body {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
                             }
-                        }
-                        
-                        @media screen and (max-width: 1000px) {
-                            .partners {
-                                display: grid;
-                                grid-template-columns: repeat(3, 30%);
-                                margin: 200px auto;
-                                width: 900px;
+                            
+                            .containers {
+                                background-color: #fff;
+                                border-radius: 5px;
+                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                                overflow: hidden;
+                                width: 400px;
+                                max-width: 100%;
+                                margin: 10em;
                             }
-                        }
-                        
-                        .section-1 {
-                            position: relative;
-                            top: 20%;
-                            left: 50%;
-                            transform: translate(-50%, 15%);
-                        }
-                        
-                        .images-one {
-                            position: relative;
-                            animation: imageOneMove 5s;
-                        }
-                        
-                        .images-two {
-                            position: relative;
-                            animation: imageTwoMove 5s;
-                        }
-                        
-                        @keyframes imageOneMove {
-                            from {
-                                bottom: 3000px;
+                            
+                            .header {
+                                border-bottom: 1px solid #f0f0f0;
+                                background-color: #f7f7f7;
+                                padding: 20px 40px;
                             }
-                            to {
-                                bottom: 0px;
+                            
+                            .header h2 {
+                                margin: 0;
                             }
-                        }
-                        
-                        @keyframes imageTwoMove {
-                            from {
-                                bottom: 3000px;
+                            
+                            .form {
+                                padding: 10px 10px;
                             }
-                            to {
-                                bottom: 0px;
+                            
+                            .form-control {
+                                margin-bottom: 10px;
+                                padding-bottom: 20px;
+                                position: relative;
                             }
-                        }
-                        
-                        .card {
-                            width: 400px;
-                            margin: auto;
-                        }
-                        
-                        @media screen and (max-width: 405px) {
-                            .card {
-                                width: 380px;
-                                margin: auto;
+                            
+                            .form-control label {
+                                display: inline-block;
+                                margin-bottom: 5px;
                             }
-                        }
-                        
-                        @media screen and (max-width: 385px) {
-                            .card {
-                                width: 370px;
-                                margin: auto;
-                            }
-                        }
-                        
-                        .card:hover,
-                        .business:hover {
-                            box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
-                        }
-                        
-                        .btn-business {
-                            margin: 30px 0px 10px 0px;
-                            background-color: transparent;
-                        }
-                        
-                        .btn-business-three {
-                            margin: 80px 0px 10px 0px;
-                        }
-                        
-                        .btn-business:hover {
-                            background-color: #49AD09;
-                            color: hsl(0, 0%, 100%);
-                            border: none;
-                        }
-                        
-                        .button {
-                            background-color: #49AD09;
-                            border: none;
-                            border-radius: 3px;
-                            box-shadow: 0 20px 25px 5px #dad8d8;
-                        }
-                        
-                        .buttons {
-                            background-color: #49AD09;
-                            border: none;
-                            margin-left: 2em;
-                            box-shadow: 0 20px 25px 5px #dad8d8;
-                            border-radius: 3px;
-                        }
-                        
-                        input {
-                            outline: none;
-                        }
-                        
-                        .card a {
-                            color: black;
-                        }
-                        
-                        .card a:focus {
-                            color: rgb(14, 240, 14);
-                        }
-                        
-                        .card a:hover {
-                            color: rgb(14, 240, 14);
-                        }
-                        
-                        .services a {
-                            color: rgb(14, 240, 14);
-                        }
-                        
-                        .hero {
-                            background-color: #F2F2F2;
-                        }
-                        
-                        .parent {
-                            height: 30em;
-                            background-color: #F2F2F2;
-                        }
-                        
-                        .services {
-                            display: flex;
-                        }
-                        
-                        .toggle {
-                            --width: 120px;
-                            --height: calc(var(--width) / 2);
-                            --border-radius: calc(var(--height) / 2);
-                            display: inline-block;
-                            cursor: pointer;
-                            position: relative;
-                            top: -20em;
-                            text-align: center;
-                        }
-                        
-                        .toggle__input {
-                            display: none;
-                            opacity: 0;
-                        }
-                        
-                        .toggle__fill {
-                            position: relative;
-                            width: var(--width);
-                            height: var(--height);
-                            border-radius: var(--border-radius);
-                            background: #ffffff;
-                            transition: background 0.2s;
-                        }
-                        
-                        .toggle__fill::after {
-                            content: "";
-                            position: absolute;
-                            top: 7px;
-                            right: 10px;
-                            height: 45px;
-                            width: 45px;
-                            text-align: center;
-                            background: #000000;
-                            background-image: url(/Source/Assets/images/Icon\ foward.svg);
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-                            border-radius: var(--border-radius);
-                            transition: transform 0.2s;
-                        }
-                        
-                        @media only screen and (max-width:769px) {
-                            .images {
-                                display: none;
-                            }
-                            .services {
+                            
+                            .form-control input {
+                                border: 2px solid #f0f0f0;
+                                border-radius: 4px;
                                 display: block;
+                                font-family: inherit;
+                                font-size: 14px;
+                                padding: 10px;
+                                width: 100%;
+                                outline: none;
                             }
-                            .Policy {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
+                            
+                            .form-control input:focus {
+                                outline: none;
+                                border-color: #777;
                             }
-                            .business {
-                                width: 350px;
+                            
+                            .form-control.success input {
+                                border-color: #2ecc71;
                             }
-                            .footer {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
+                            
+                            .form-control.error input {
+                                border-color: #e74c3c;
                             }
-                            .footer-content {
-                                display: flex;
-                                flex-direction: column;
-                                text-align: center;
+                            
+                            .form-control i {
+                                visibility: hidden;
+                                position: absolute;
+                                top: 40px;
+                                right: 10px;
                             }
-                        }
-                        
-                        @media only screen and (max-width:750px) {}
-                        
-                        .section-4 {
-                            position: relative;
-                            top: 7em;
-                        }
-                        
-                         :root {
-                            --header-height: 3rem;
-                            --font-semi: 600;
-                        }
-                        
-                         :root {
-                            --body-font: 'Poppins', sans-serif;
-                            --big-font-size: 2rem;
-                            --h2-font-size: 1.25rem;
-                            --normal-font-size: 0.938rem;
-                        }
-                        
-                         :root {
-                            --mb-1: 0.5rem;
-                            --mb-2: 1rem;
-                            --mb-3: 1.5rem;
-                            --mb-4: 2rem;
-                            --mb-5: 2.5rem;
-                            --mb-6: 3rem;
-                        }
-                        /*===== z index =====*/
-                        
-                         :root {
-                            --z-back: -10;
-                            --z-normal: 1;
-                            --z-tooltip: 10;
-                            --z-fixed: 100;
-                        }
-                        /*===== BASE =====*/
-                        
-                        ul {
-                            list-style: none;
-                        }
-                        /*===== CLASS CSS ===== */
-                        
-                        .l-header {
-                            width: 100%;
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            z-index: var(--z-fixed);
-                            background-color: #fff;
-                            box-shadow: 0 1px 4px rgba(146, 161, 176, .15);
-                        }
-                        /*===== NAV =====*/
-                        
-                        .nav {
-                            height: var(--header-height);
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            font-weight: var(--font-semi);
-                            margin: 0px 100px;
-                        }
-                        
-                        @media screen and (max-width: 1005px) {
-                            .nav {
-                                margin: 0px 50px;
+                            
+                            .form-control.success i.fa-check-circle {
+                                color: #2ecc71;
+                                visibility: visible;
                             }
-                        }
-                        
-                        @media screen and (max-width: 890px) {
-                            .nav {
-                                margin: 0px 30px;
+                            
+                            .form-control.error i.fa-exclamation-circle {
+                                color: #e74c3c;
+                                visibility: visible;
                             }
-                        }
-                        
-                        @media screen and (max-width: 890px) {
-                            .nav {
-                                margin: 0px 20px;
+                            
+                            .form-control small {
+                                color: #e74c3c;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                visibility: hidden;
                             }
-                        }
-                        
-                        @media screen and (max-width: 768px) {
-                            .nav {
-                                margin: 0 30px;
+                            
+                            .form-control.error small {
+                                visibility: visible;
                             }
-                            .nav__menu {
-                                position: fixed;
-                                top: var(--header-height);
-                                right: -100%;
-                                width: 80%;
-                                height: 100%;
-                                padding: 2rem;
+                            
+                            .form button {
                                 background-color: #49AD09;
-                                transition: .5s;
+                                border: none;
+                                border-radius: 4px;
+                                color: #fff;
+                                display: block;
+                                font-family: inherit;
+                                font-size: 16px;
+                                padding: 10px;
+                                margin-top: 20px;
+                                width: 100%;
                             }
-                            .specification {
+                            /* SOCIAL PANEL CSS */
+                            
+                            .social-panel-container {
+                                position: fixed;
+                                right: 0;
+                                bottom: 80px;
+                                transform: translateX(100%);
+                                transition: transform 0.4s ease-in-out;
+                            }
+                            
+                            .social-panel-container.visible {
+                                transform: translateX(-10px);
+                            }
+                            
+                            .social-panel {
+                                background-color: #fff;
+                                border-radius: 16px;
+                                box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
+                                border: 5px solid #49AD09;
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: center;
-                            }
-                        }
-                        
-                        li:hover {
-                            text-decoration: none;
-                            color: black;
-                        }
-                        
-                        .nav__link {
-                            position: relative;
-                            color: #fff;
-                        }
-                        
-                        .nav__link:hover::after {
-                            position: absolute;
-                            content: "";
-                            width: 100%;
-                            height: 0.18rem;
-                            left: 0;
-                            top: 2rem;
-                            background-color: #49AD09;
-                        }
-                        
-                        .actives::after {
-                            position: absolute;
-                            content: "";
-                            width: 100%;
-                            height: 0.18rem;
-                            left: 0;
-                            top: 2rem;
-                            background-color: #49AD09;
-                        }
-                        /*=== Show menu ===*/
-                        
-                        .show {
-                            right: 0;
-                        }
-                        
-                        @media screen and (min-width: 768px) {
-                            .nav {
-                                height: calc(var(--header-height) + 1rem);
-                            }
-                            .nav__list {
-                                display: flex;
-                                padding-top: 0;
                                 align-items: center;
+                                font-family: 'Muli';
+                                position: relative;
+                                height: 169px;
+                                width: 370px;
+                                max-width: calc(100% - 10px);
+                            }
+                            
+                            .social-panel button.close-btn {
+                                border: 0;
+                                color: #49AD09;
+                                cursor: pointer;
+                                font-size: 20px;
+                                position: absolute;
+                                top: 5px;
+                                right: 5px;
+                            }
+                            
+                            .social-panel button.close-btn:focus {
+                                outline: none;
+                            }
+                            
+                            .social-panel p {
+                                background-color: #49AD09;
+                                border-radius: 0 0 10px 10px;
+                                color: #fff;
+                                font-size: 14px;
+                                line-height: 18px;
+                                padding: 2px 17px 6px;
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                margin: 0;
+                                transform: translateX(-50%);
                                 text-align: center;
+                                width: 235px;
                             }
-                            .nav__item {
-                                margin-left: var(--mb-6);
-                                margin-bottom: 0;
+                            
+                            .social-panel p i {
+                                margin: 0 5px;
                             }
-                            .nav__toggle {
-                                display: none;
+                            
+                            .social-panel p a {
+                                color: #FF7500;
+                                text-decoration: none;
                             }
-                            .nav__link {
-                                color: var(--second-color);
+                            
+                            .social-panel h4 {
+                                margin: 20px 0;
+                                color: #97A5CE;
+                                font-family: 'Muli';
+                                font-size: 14px;
+                                line-height: 18px;
+                                text-transform: uppercase;
                             }
-                            .specification {
+                            
+                            .social-panel ul {
                                 display: flex;
-                                flex-direction: row;
-                                width: 650px;
+                                list-style-type: none;
+                                padding: 0;
+                                margin: 0;
+                            }
+                            
+                            .social-panel ul li {
+                                margin: 0 10px;
+                            }
+                            
+                            .social-panel ul li a {
+                                border: 1px solid #DCE1F2;
+                                border-radius: 50%;
+                                color: #49AD09;
+                                font-size: 20px;
+                                display: flex;
                                 justify-content: center;
+                                align-items: center;
+                                height: 50px;
+                                width: 50px;
+                                text-decoration: none;
+                            }
+                            
+                            .social-panel ul li a:hover {
+                                border-color: #FF6A00;
+                                box-shadow: 0 9px 12px -9px #FF6A00;
+                            }
+                            
+                            .floating-btn {
+                                border-radius: 26.5px;
+                                background-color: #49AD09;
+                                border: 1px solid #2ecc71;
+                                box-shadow: 0 16px 22px -17px #03153B;
+                                color: #fff;
+                                cursor: pointer;
+                                font-size: 16px;
+                                line-height: 20px;
+                                padding: 12px 20px;
+                                position: fixed;
+                                bottom: 20px;
+                                right: 20px;
+                                z-index: 999;
+                            }
+                            
+                            .floating-btn:hover {
+                                background-color: #ffffff;
+                                color: #2ecc71;
+                            }
+                            
+                            .floating-btn:focus {
+                                outline: none;
+                            }
+                            
+                            .floating-text {
+                                background-color: #49AD09;
+                                border-radius: 10px 10px 0 0;
+                                color: #fff;
+                                font-family: 'Muli';
+                                padding: 7px 15px;
+                                position: fixed;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                text-align: center;
+                                z-index: 998;
+                            }
+                            
+                            .floating-text a {
+                                color: #FF7500;
+                                text-decoration: none;
+                            }
+                            
+                            @media screen and (max-width: 480px) {
+                                .social-panel-container.visible {
+                                    transform: translateX(0px);
+                                }
+                                .floating-btn {
+                                    right: 10px;
+                                }
+                            }
+                            
+                            .night {
+                                display: none;
+                                /* Hidden by default */
+                                position: fixed;
+                                /* Stay in place */
+                                z-index: 999;
+                                /* Sit on top */
+                                padding-top: 100px;
+                                /* Location of the box */
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                /* Full width */
+                                height: 100%;
+                                /* Full height */
+                                overflow: auto;
+                                /* Enable scroll if needed */
+                                background-color: rgb(0, 0, 0);
+                                /* Fallback color */
+                                background-color: rgba(0, 0, 0, 0.4);
+                                /* Black w/ opacity */
+                            }
+                            /* Modal Content */
+                            
+                            .content {
+                                background-color: #fefefe;
+                                margin: auto;
+                                padding: 20px;
+                                border: 1px solid #888;
+                                border-radius: 5px;
+                                width: 450px;
+                            }
+                            
+                            @media screen and (max-width: 470px) {
+                                .content {
+                                    width: 400px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 410px) {
+                                .content {
+                                    width: 370px;
+                                }
+                            }
+                            
+                            .morning {
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                            /* The Close Button */
+                            
+                            .blah {
+                                color: #aaaaaa;
+                                font-size: 30px;
+                                font-weight: bold;
+                                position: relative;
+                                top: -10px;
+                            }
+                            
+                            .blah:hover,
+                            .blah:focus {
+                                color: #000;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                            /* Full-width input fields */
+                            
+                            .form-container input[type=text],
+                            .form-container input[type=email],
+                            .form-container input[type=password] {
+                                width: 100%;
+                                padding: 15px;
+                                margin: 8px 0px 20px 0px;
+                                background: #f1f1f1;
+                            }
+                            /* When the inputs get focus, do something */
+                            
+                            .form-container input[type=text]:focus,
+                            .form-container input[type=password]:focus {
+                                background-color: #ddd;
+                                outline: none;
+                            }
+                            /* Set a style for the submit/login button */
+                            
+                            .form-container .btn {
+                                background-color: #04AA6D;
+                                color: white;
+                                padding: 10px 16px;
+                                border: none;
+                                cursor: pointer;
+                                width: 100%;
+                                margin-bottom: 10px;
+                                opacity: 0.8;
+                            }
+                            /* Add a red background color to the cancel button */
+                            /* Add some hover effects to buttons */
+                            
+                            .form-container .btn:hover,
+                            .open-button:hover {
+                                opacity: 1;
+                            }
+                            
+                            .show {
+                                border: none;
+                            }
+                            
+                            .shows {
+                                border: 2px solid red;
+                            }
+                            
+                            .partners {
+                                display: grid;
+                                grid-template-columns: repeat(5, 22%);
+                                width: 1200px;
+                                margin: 200px auto;
+                            }
+                            
+                            @media screen and (max-width: 1305px) {
+                                .partners {
+                                    display: grid;
+                                    grid-template-columns: repeat(5, 23%);
+                                    margin: 200px auto;
+                                    width: 1000px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 1100px) {
+                                .partners {
+                                    display: grid;
+                                    grid-template-columns: repeat(5, 23%);
+                                    margin: 200px auto;
+                                    width: 800px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 1000px) {
+                                .partners {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 30%);
+                                    margin: 200px auto;
+                                    width: 900px;
+                                }
+                            }
+                            
+                            .section-1 {
+                                position: relative;
+                                top: 20%;
+                                left: 50%;
+                                transform: translate(-50%, 15%);
+                            }
+                            
+                            .images-one {
+                                position: relative;
+                                animation: imageOneMove 5s;
+                            }
+                            
+                            .images-two {
+                                position: relative;
+                                animation: imageTwoMove 5s;
+                            }
+                            
+                            @keyframes imageOneMove {
+                                from {
+                                    bottom: 3000px;
+                                }
+                                to {
+                                    bottom: 0px;
+                                }
+                            }
+                            
+                            @keyframes imageTwoMove {
+                                from {
+                                    bottom: 3000px;
+                                }
+                                to {
+                                    bottom: 0px;
+                                }
+                            }
+                            
+                            .card {
+                                width: 400px;
                                 margin: auto;
                             }
-                        }
-                        
-                        #navMenu.active {
-                            margin-top: 1em;
-                        }
-                        
-                        #navMenu>span {
-                            display: block;
-                            width: 30px;
-                            height: 3px;
-                            border-radius: 9999px;
-                            background-color: #000000;
-                        }
-                        
-                        #navMenu>span:not(:last-child) {
-                            margin-bottom: 7px;
-                        }
-                        
-                        #navMenu,
-                        #navMenu>span {
-                            transition: all .4s ease-in-out;
-                        }
-                        
-                        #navMenu.active {
-                            transition-delay: 0.8s;
-                            transform: rotate(45deg);
-                        }
-                        
-                        #navMenu.active>span:nth-child(2) {
-                            width: 0;
-                        }
-                        
-                        #navMenu.active>span:nth-child(1),
-                        #navMenu.active>span:nth-child(3) {
-                            transition-delay: .4s;
-                        }
-                        
-                        #navMenu.active>span:nth-child(3) {
-                            transform: translateY(-19px)rotate(90deg);
-                        }
+                            
+                            @media screen and (max-width: 405px) {
+                                .card {
+                                    width: 380px;
+                                    margin: auto;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 385px) {
+                                .card {
+                                    width: 370px;
+                                    margin: auto;
+                                }
+                            }
+                            
+                            .card:hover,
+                            .business:hover {
+                                box-shadow: 0 25px 50px -20px rgb(221, 216, 216);
+                            }
+                            
+                            .btn-business {
+                                margin: 30px 0px 10px 0px;
+                                background-color: transparent;
+                            }
+                            
+                            .btn-business-three {
+                                margin: 80px 0px 10px 0px;
+                            }
+                            
+                            .btn-business:hover {
+                                background-color: #49AD09;
+                                color: hsl(0, 0%, 100%);
+                                border: none;
+                            }
+                            
+                            .button {
+                                background-color: #49AD09;
+                                border: none;
+                                border-radius: 3px;
+                                box-shadow: 0 20px 25px 5px #dad8d8;
+                            }
+                            
+                            .buttons {
+                                background-color: #49AD09;
+                                border: none;
+                                margin-left: 2em;
+                                box-shadow: 0 20px 25px 5px #dad8d8;
+                                border-radius: 3px;
+                            }
+                            
+                            input {
+                                outline: none;
+                            }
+                            
+                            .card a {
+                                color: black;
+                            }
+                            
+                            .card a:focus {
+                                color: rgb(14, 240, 14);
+                            }
+                            
+                            .card a:hover {
+                                color: rgb(14, 240, 14);
+                            }
+                            
+                            .services a {
+                                color: rgb(14, 240, 14);
+                            }
+                            
+                            .hero {
+                                background-color: #F2F2F2;
+                            }
+                            
+                            .parent {
+                                height: 30em;
+                                background-color: #F2F2F2;
+                            }
+                            
+                            .services {
+                                display: flex;
+                            }
+                            
+                            .toggle {
+                                --width: 120px;
+                                --height: calc(var(--width) / 2);
+                                --border-radius: calc(var(--height) / 2);
+                                display: inline-block;
+                                cursor: pointer;
+                                position: relative;
+                                top: -20em;
+                                text-align: center;
+                            }
+                            
+                            .toggle__input {
+                                display: none;
+                                opacity: 0;
+                            }
+                            
+                            .toggle__fill {
+                                position: relative;
+                                width: var(--width);
+                                height: var(--height);
+                                border-radius: var(--border-radius);
+                                background: #ffffff;
+                                transition: background 0.2s;
+                            }
+                            
+                            .toggle__fill::after {
+                                content: "";
+                                position: absolute;
+                                top: 7px;
+                                right: 10px;
+                                height: 45px;
+                                width: 45px;
+                                text-align: center;
+                                background: #000000;
+                                background-image: url(/Source/Assets/images/Icon\ foward.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+                                border-radius: var(--border-radius);
+                                transition: transform 0.2s;
+                            }
+                            
+                            @media only screen and (max-width:769px) {
+                                .images {
+                                    display: none;
+                                }
+                                .services {
+                                    display: block;
+                                }
+                                .Policy {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                                .business {
+                                    width: 350px;
+                                }
+                                .footer {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                }
+                                .footer-content {
+                                    display: flex;
+                                    flex-direction: column;
+                                    text-align: center;
+                                }
+                            }
+                            
+                            @media only screen and (max-width:750px) {}
+                            
+                            .section-4 {
+                                position: relative;
+                                top: 7em;
+                            }
+                            
+                             :root {
+                                --header-height: 3rem;
+                                --font-semi: 600;
+                            }
+                            
+                             :root {
+                                --body-font: 'Poppins', sans-serif;
+                                --big-font-size: 2rem;
+                                --h2-font-size: 1.25rem;
+                                --normal-font-size: 0.938rem;
+                            }
+                            
+                             :root {
+                                --mb-1: 0.5rem;
+                                --mb-2: 1rem;
+                                --mb-3: 1.5rem;
+                                --mb-4: 2rem;
+                                --mb-5: 2.5rem;
+                                --mb-6: 3rem;
+                            }
+                            /*===== z index =====*/
+                            
+                             :root {
+                                --z-back: -10;
+                                --z-normal: 1;
+                                --z-tooltip: 10;
+                                --z-fixed: 100;
+                            }
+                            /*===== BASE =====*/
+                            
+                            ul {
+                                list-style: none;
+                            }
+                            /*===== CLASS CSS ===== */
+                            
+                            .l-header {
+                                width: 100%;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                z-index: var(--z-fixed);
+                                background-color: #fff;
+                                box-shadow: 0 1px 4px rgba(146, 161, 176, .15);
+                            }
+                            /*===== NAV =====*/
+                            
+                            .nav {
+                                height: var(--header-height);
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-weight: var(--font-semi);
+                                margin: 0px 100px;
+                            }
+                            
+                            @media screen and (max-width: 1005px) {
+                                .nav {
+                                    margin: 0px 50px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 890px) {
+                                .nav {
+                                    margin: 0px 30px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 890px) {
+                                .nav {
+                                    margin: 0px 20px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 768px) {
+                                .nav {
+                                    margin: 0 30px;
+                                }
+                                .nav__menu {
+                                    position: fixed;
+                                    top: var(--header-height);
+                                    right: -100%;
+                                    width: 80%;
+                                    height: 100%;
+                                    padding: 2rem;
+                                    background-color: #49AD09;
+                                    transition: .5s;
+                                }
+                                .specification {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                }
+                            }
+                            
+                            li:hover {
+                                text-decoration: none;
+                                color: black;
+                            }
+                            
+                            .nav__link {
+                                position: relative;
+                                color: #fff;
+                            }
+                            
+                            .nav__link:hover::after {
+                                position: absolute;
+                                content: "";
+                                width: 100%;
+                                height: 0.18rem;
+                                left: 0;
+                                top: 2rem;
+                                background-color: #49AD09;
+                            }
+                            
+                            .actives::after {
+                                position: absolute;
+                                content: "";
+                                width: 100%;
+                                height: 0.18rem;
+                                left: 0;
+                                top: 2rem;
+                                background-color: #49AD09;
+                            }
+                            /*=== Show menu ===*/
+                            
+                            .show {
+                                right: 0;
+                            }
+                            
+                            @media screen and (min-width: 768px) {
+                                .nav {
+                                    height: calc(var(--header-height) + 1rem);
+                                }
+                                .nav__list {
+                                    display: flex;
+                                    padding-top: 0;
+                                    align-items: center;
+                                    text-align: center;
+                                }
+                                .nav__item {
+                                    margin-left: var(--mb-6);
+                                    margin-bottom: 0;
+                                }
+                                .nav__toggle {
+                                    display: none;
+                                }
+                                .nav__link {
+                                    color: var(--second-color);
+                                }
+                                .specification {
+                                    display: flex;
+                                    flex-direction: row;
+                                    width: 650px;
+                                    justify-content: center;
+                                    margin: auto;
+                                }
+                            }
+                            
+                            #navMenu.active {
+                                margin-top: 1em;
+                            }
+                            
+                            #navMenu>span {
+                                display: block;
+                                width: 30px;
+                                height: 3px;
+                                border-radius: 9999px;
+                                background-color: #000000;
+                            }
+                            
+                            #navMenu>span:not(:last-child) {
+                                margin-bottom: 7px;
+                            }
+                            
+                            #navMenu,
+                            #navMenu>span {
+                                transition: all .4s ease-in-out;
+                            }
+                            
+                            #navMenu.active {
+                                transition-delay: 0.8s;
+                                transform: rotate(45deg);
+                            }
+                            
+                            #navMenu.active>span:nth-child(2) {
+                                width: 0;
+                            }
+                            
+                            #navMenu.active>span:nth-child(1),
+                            #navMenu.active>span:nth-child(3) {
+                                transition-delay: .4s;
+                            }
+                            
+                            #navMenu.active>span:nth-child(3) {
+                                transform: translateY(-19px)rotate(90deg);
+                            }
