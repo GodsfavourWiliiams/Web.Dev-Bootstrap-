@@ -6,7 +6,6 @@ const modal = document.getElementById("myModal");
 const body = document.getElementById("body");
 const title = document.getElementById("form-title");
 const span = document.getElementsByClassName("blah")[0];
-
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
