@@ -41,6 +41,8 @@ function checkInputs() {
 
     if (passwordValue === '') {
         setErrorFor(password, 'Password cannot be blank');
+    } else if (passwordValue.length < 8) {
+        setErrorFor(password, 'Password Must have Minimum 8 Characters');
     } else {
         setSuccessFor(password);
     }
