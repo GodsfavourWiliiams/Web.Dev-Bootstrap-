@@ -7,14 +7,19 @@ const body = document.getElementById("body");
 const title = document.getElementById("form-title");
 const span = document.getElementsByClassName("blah")[0];
 const form = document.getElementById('form');
+
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
+const showPassword = document.getElementById("showPassword");
+const hidePassword = document.getElementById("hidePassword");
+const showPasswordTwo = document.getElementById("showPassword2");
+const hidePasswordTwo = document.getElementById("hidePassword2");
+
 form.addEventListener('submit', e => {
     e.preventDefault();
-
     checkInputs();
 });
 
@@ -53,8 +58,42 @@ function checkInputs() {
         setErrorFor(password2, 'Passwords does not match');
     } else {
         setSuccessFor(password2);
+        disApear()
     }
 }
+
+hidePassword.addEventListener("click", () => {
+    var x = document.getElementById("password");
+    if (x.type == "password") {
+        x.type = "text";
+        showPassword.style.display = "block";
+        hidePassword.style.display = "none";
+    } else {
+        x.type =
+            "password"
+
+    }
+});
+showPassword.addEventListener("click", () => {
+    showPassword.style.display = "none";
+    hidePassword.style.display = "block";
+});
+hidePasswordTwo.addEventListener("click", () => {
+    var x = document.getElementById("password2");
+    if (x.type == "password") {
+        x.type = "text";
+        showPasswordTwo.style.display = "block";
+        hidePasswordTwo.style.display = "none";
+    } else {
+        x.type =
+            "password"
+
+    }
+});
+showPasswordTwo.addEventListener("click", () => {
+    showPasswordTwo.style.display = "none";
+    hidePasswordTwo.style.display = "block";
+});
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
@@ -67,9 +106,12 @@ function setSuccessFor(input) {
     const formControl = input.parentElement;
     formControl.className = 'formControl success';
 }
+setTimeout(function disApear() {
+    formControl.classList.remove("error");
+}, 1000);
 
 function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    return /^(([^<>()=\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 // SOCIAL PANEL JS
@@ -104,13 +146,6 @@ span.addEventListener("click", () => {
     body.style.overflow = "visible"
 });
 // showError when inputs is empty or zero
-
-//Submit button function
-function submit() {
-    modal.style.display = "none";
-    // check: if all input is empty show alert
-
-}
 
 
 // When the user clicks anywhere outside of the modal, close it
@@ -155,35 +190,3 @@ function linkAction() {
 
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
-
-// function validateForm() {
-//     var x = document.forms.value;
-//     if (x == null || x == "") {
-//         const enu = document.getElementById('enu');
-//         enu.classList.add('shows');
-//         // disapear the message after 3 sec
-//         setTimeout(function disApear() {
-//             enu.classList.remove("shows");
-//         }, 2000);
-//         const enuu = document.getElementById('enuu');
-//         enuu.classList.add('shows');
-//         setTimeout(function disApear() {
-//             enuu.classList.remove("shows");
-//         }, 2000);
-//         // disapear the message after 3 sec
-//         const enuuu = document.getElementById('enuuu');
-//         enuuu.classList.add('shows');
-//         setTimeout(function disApear() {
-//             enuuu.classList.remove("shows");
-//         }, 2000);
-
-//         const enuuuu = document.getElementById('enuuuu');
-//         enuuuu.classList.add('shows');
-//         // disapear the message after 3 sec
-//         setTimeout(function disApear() {
-//             enuuuu.classList.remove("shows");
-//         }, 2000);
-//         return false;
-//     } else {}
-// };
-// Get the modal
