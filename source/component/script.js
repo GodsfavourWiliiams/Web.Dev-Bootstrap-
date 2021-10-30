@@ -18,6 +18,7 @@ const hidePassword = document.getElementById("hidePassword");
 const showPasswordTwo = document.getElementById("showPassword2");
 const hidePasswordTwo = document.getElementById("hidePassword2");
 
+
 form.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();

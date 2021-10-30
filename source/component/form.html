@@ -15,15 +15,29 @@
             <div class="signin-signup">
                 <form action="#" class="sign-in-form">
                     <h2 class="title">Sign in</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+
+                    <div class="formControl input-field">
+                        <!-- <label for="username">Email</label> -->
+                        <input type="email" placeholder="asukquo@gmail.com" id="email" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+
+                    <div class="formControl input-field">
+                        <!-- <label for="username">Password</label> -->
+                        <input type="password" placeholder="Password" id="password" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="viewPassword">
+                            <i class="fas fa-eye shows" id="showPassword" onclick="showPassword()"></i>
+                            <i class="fas fa-eye-slash " id="hidePassword" onclick="hidePassword()"></i>
+                        </div>
+
+                        <small>Error message</small>
                     </div>
-                    <input type="submit" value="Login" class="btn solid" />
+
+                    <input type="submit" value="Sign in" class="btn solid" />
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -42,17 +56,46 @@
                 </form>
                 <form action="#" class="sign-up-form">
                     <h2 class="title">Sign up</h2>
-                    <div class="input-field">
+                    <div class="formControl input-field">
+                        <!-- <label for="username">Full Name</label> -->
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Godsfavour Williams" id="Fullname" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
+
+                    <div class="formControl input-field">
+                        <!-- <label for="username">Email</label> -->
+                        <input type="email" placeholder="asukquo@gmail.com" id="email" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
                     </div>
+
+                    <div class="formControl input-field">
+                        <!-- <label for="username">Password</label> -->
+                        <input type="password" placeholder="Password" id="password" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="viewPassword">
+                            <i class="fas fa-eye shows" id="showPassword" onclick="showPassword()"></i>
+                            <i class="fas fa-eye-slash " id="hidePassword" onclick="hidePassword()"></i>
+                        </div>
+
+                        <small>Error message</small>
+                    </div>
+
                     <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <!-- <label for="username">Password check</label> -->
+                        <input type="password" placeholder="Password check" id="password2" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="viewPassword">
+                            <i class="fas fa-eye show" id="showPassword2" onclick="showPassword()"></i>
+                            <i class="fas fa-eye-slash " id="hidePassword2" onclick="hidePassword()"></i>
+                        </div>
+                        <small>Error message</small>
                     </div>
                     <input type="submit" class="btn" value="Sign up" />
                     <p class="social-text">Or Sign up with social platforms</p>
