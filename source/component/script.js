@@ -1,8 +1,8 @@
 const navMenu = document.querySelector("#navMenu");
 const Btns = document.querySelectorAll(".btn");
 const myUp = document.getElementById("modal");
-const myIn = document.getElementById("modalsignin");
-const modal = document.getElementById("myModal");
+// const myIn = document.getElementById("modalsignin");
+// const modal = document.getElementById("myModal");
 const body = document.getElementById("body");
 const title = document.getElementById("form-title");
 const span = document.getElementsByClassName("blah")[0];
@@ -13,11 +13,10 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
-const showPassword = document.getElementById("showPassword");
-const hidePassword = document.getElementById("hidePassword");
-const showPasswordTwo = document.getElementById("showPassword2");
-const hidePasswordTwo = document.getElementById("hidePassword2");
-
+var showPassword = document.getElementById("showPassword");
+var hidePassword = document.getElementById("hidePassword");
+var showPasswordTwo = document.getElementById("showPassword2");
+var hidePasswordTwo = document.getElementById("hidePassword2");
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -128,18 +127,18 @@ close_btn.addEventListener('click', () => {
     social_panel_container.classList.remove('visible')
 });
 // When the user clicks the button, open the modal 
-myUp.addEventListener("click", () => {
-    modal.style.display = "block";
-    body.style.overflow = "hidden"
-    title.textContent = "Sign up";
-    // Btns.value = "Sign up";
-});
-myIn.addEventListener("click", () => {
-    modal.style.display = "block";
-    body.style.overflow = "hidden";
-    title.textContent = "Sign in";
-    // Btns.textContent = "Login";
-});
+// myUp.addEventListener("click", () => {
+//     modal.style.display = "block";
+//     body.style.overflow = "hidden"
+//     title.textContent = "Sign up";
+//     // Btns.value = "Sign up";
+// });
+// myIn.addEventListener("click", () => {
+//     modal.style.display = "block";
+//     body.style.overflow = "hidden";
+//     title.textContent = "Sign in";
+//     // Btns.textContent = "Login";
+// });
 // When the user clicks on <span> (x), close the modal
 
 span.addEventListener("click", () => {

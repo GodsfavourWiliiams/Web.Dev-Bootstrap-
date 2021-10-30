@@ -551,7 +551,7 @@
                                 width: 85%;
                                 height: 100vh;
                                 background-color: #49AD09;
-                                transition: 1.3s;
+                                transition: 1s;
                             }
                             .specification {
                                 display: flex;
@@ -665,7 +665,7 @@
                         }
                         
                         #navMenu.active {
-                            transition-delay: 0.4s;
+                            transition-delay: 0.8s;
                             transform: rotate(45deg);
                         }
                         
