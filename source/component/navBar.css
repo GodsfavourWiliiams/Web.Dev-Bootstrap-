@@ -98,24 +98,26 @@
             background-color: #49AD09;
             transition: 1s;
         }
-        .buttons {
-            background-color: #fff;
+        .Sign-Up-Btn {
+            color: #fff;
             border: none;
-            border-radius: 5px;
-            border: 2px solid #49AD09;
-            box-shadow: -5px 16px 25px -15px #03153B;
-            color: #49AD09;
-            cursor: pointer;
-            font-size: 20px;
-            position: relative;
-            top: 150px;
-            width: 90%;
+            padding: 0px 23px;
+            border-radius: 3px;
+            font-size: 18px;
+            font-weight: 500;
+            width: 70%;
             margin: auto;
         }
         .nav__list li {
             position: relative;
             color: #fff;
-            padding: 10px;
+            padding: 22px;
+            border-bottom: #fff 3px solid;
+            text-align: center;
+            top: 50px;
+        }
+        .nav__list li :hover {
+            font-size: 20px;
         }
     }
     
