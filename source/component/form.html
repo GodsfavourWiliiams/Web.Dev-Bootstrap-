@@ -5,39 +5,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+     <link rel="icon" type="image/png" sizes="32x32" href="/source/images/Web.Dev.logo.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="form.css" />
-    <title>Sign in & Sign up Form</title>
+    <link rel="stylesheet" href="navBar.css">
+    <title>Sign in & Sign up </title>
 </head>
 
 <body>
+    <nav class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <div class="">
+                    <img src="/source/images/Web.Dev.logo.svg" alt="">
+                </div>
+            </div>
+
+            <div class="nav__menu mt-2" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#sponsords-logo" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link" id="">Sign in</a></li>
+                    <li><a href="form.html"><button class="Sign-Up-Btn px-4 py-2" id="">Sign up</button></a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <div id="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!--  -->
+        </nav>
+
+    </nav>
+
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="#" class="sign-in-form">
+                <form id="Loginform" class="sign-in-form">
                     <h2 class="title">Sign in</h2>
 
-                    <div class="formControl input-field">
-                        <!-- <label for="username">Email</label> -->
-                        <input type="email" placeholder="asukquo@gmail.com" id="email" />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error message</small>
-                    </div>
+                    <div class="containers">
+                        <div class="form-control">
+                            <label for="username">Email</label>
+                            <input type="email" placeholder="asuqkwo@paystack.com" id="Loginemail" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="username">Password</label>
+                            <input type="password" placeholder="Password" id="Loginpassword" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
 
-                    <div class="formControl input-field">
-                        <!-- <label for="username">Password</label> -->
-                        <input type="password" placeholder="Password" id="password" />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <div class="viewPassword">
-                            <i class="fas fa-eye shows" id="showPassword" onclick="showPassword()"></i>
-                            <i class="fas fa-eye-slash " id="hidePassword" onclick="hidePassword()"></i>
+                            <small>Error message</small>
                         </div>
 
-                        <small>Error message</small>
                     </div>
-
-                    <input type="submit" value="Sign in" class="btn solid" />
+                    <style>
+                        .shows {
+                            display: none;
+                        }
+                        
+                        .form-control .viewPassword i {
+                            visibility: visible;
+                            padding-right: 12px;
+                            cursor: pointer;
+                        }
+                    </style>
+                    <button class="btn">Submit</button>
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -54,51 +97,48 @@
                         </a>
                     </div>
                 </form>
-                <form action="#" class="sign-up-form">
+                <form id="form" class="sign-up-form">
                     <h2 class="title">Sign up</h2>
-                    <div class="formControl input-field">
-                        <!-- <label for="username">Full Name</label> -->
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Godsfavour Williams" id="Fullname" />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error message</small>
-                    </div>
-
-                    <div class="formControl input-field">
-                        <!-- <label for="username">Email</label> -->
-                        <input type="email" placeholder="asukquo@gmail.com" id="email" />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error message</small>
-                    </div>
-
-                    <div class="formControl input-field">
-                        <!-- <label for="username">Password</label> -->
-                        <input type="password" placeholder="Password" id="password" />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <div class="viewPassword">
-                            <i class="fas fa-eye shows" id="showPassword" onclick="showPassword()"></i>
-                            <i class="fas fa-eye-slash " id="hidePassword" onclick="hidePassword()"></i>
+                    <div class="containers">
+                        <div class="form-control">
+                            <label for="username">Fullname</label>
+                            <input type="text" placeholder="Eno-obong Awakessien" id="username" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
                         </div>
-
-                        <small>Error message</small>
-                    </div>
-
-                    <div class="input-field">
-                        <!-- <label for="username">Password check</label> -->
-                        <input type="password" placeholder="Password check" id="password2" />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <div class="viewPassword">
-                            <i class="fas fa-eye show" id="showPassword2" onclick="showPassword()"></i>
-                            <i class="fas fa-eye-slash " id="hidePassword2" onclick="hidePassword()"></i>
+                        <div class="form-control">
+                            <label for="username">Email</label>
+                            <input type="email" placeholder="asuqkwo@paystack.com" id="email" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
                         </div>
-                        <small>Error message</small>
+                        <div class="form-control">
+                            <label for="username">Password check</label>
+                            <input type="password" placeholder="Password" id="password" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div class="viewPassword">
+                                <i class="fas fa-eye shows" id="showPassword" onclick="showPassword()"></i>
+                                <i class="fas fa-eye-slash " id="hidePassword" onclick="hidePassword()"></i>
+                            </div>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label for="username">Password check</label>
+                            <input type="password" placeholder="Password two" id="password2" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div class="viewPassword">
+                                <i class="fas fa-eye shows" id="showPassword2" onclick="showPassword()"></i>
+                                <i class="fas fa-eye-slash " id="hidePassword2" onclick="hidePassword()"></i>
+                            </div>
+                            <small>Error message</small>
+                        </div>
+                        <button class="btn">Submit</button>
                     </div>
-                    <input type="submit" class="btn" value="Sign up" />
-                    <p class="social-text">Or Sign up with social platforms</p>
+                    <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
@@ -114,40 +154,106 @@
                         </a>
                     </div>
                 </form>
-            </div>
-        </div>
 
-        <div class="panels-container">
-            <div class="panel left-panel">
-                <div class="content">
-                    <h3>New here ?</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!
-                    </p>
-                    <button class="btn transparent" id="sign-up-btn">
+            </div>
+
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>New here ?</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!
+                        </p>
+                        <button class="btn transparent" id="sign-up-btn">
               Sign up
             </button>
+                    </div>
+                    <img src="/source/images/formlogo.svg" class="image" alt="" />
                 </div>
-                <img src="/source/images/formlogo.svg" class="image" alt="" />
-            </div>
-            <div class="panel right-panel">
-                <div class="content">
-                    <h3>One of us ?</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laboriosam ad deleniti.
-                    </p>
-                    <button class="btn transparent" id="sign-in-btn">
+                <div class="panel right-panel">
+                    <div class="content">
+                        <h3>One of us ?</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laboriosam ad deleniti.
+                        </p>
+                        <button class="btn transparent" id="sign-in-btn">
               Sign in
             </button>
+                    </div>
+                    <img src="/source/images/register.svg" class="image" alt="" />
                 </div>
-                <img src="/source/images/register.svg" class="image" alt="" />
             </div>
         </div>
-    </div>
-    <style>
+        <style>
+            .containers {
+                width: 380px;
+                max-width: 100%;
+            }
+            
+            .form-control {
+                margin-bottom: 10px;
+                padding-bottom: 20px;
+                position: relative;
+            }
+            
+            .form-control label {
+                display: inline-block;
+                margin-bottom: 3px;
+            }
+            
+            .form-control input {
+                border-radius: 4px;
+                display: block;
+                font-family: inherit;
+                font-size: 14px;
+                padding: 10px;
+                width: 100%;
+                height: 50px;
+                outline: none;
+                border: #f0f0f0 1px solid;
+                background-color: #f0f0f0;
+            }
+            
+            .form-control.success input {
+                border-color: #2ecc71;
+            }
+            
+            .form-control.error input {
+                border-color: #e74c3c;
+            }
+            
+            .form-control i {
+                visibility: hidden;
+                position: absolute;
+                top: 40px;
+                right: 10px;
+            }
+            
+            .form-control.success i.fa-check-circle {
+                color: #2ecc71;
+                visibility: visible;
+            }
+            
+            .form-control.error i.fa-exclamation-circle {
+                color: #e74c3c;
+                visibility: visible;
+            }
+            
+            .form-control small {
+                color: #e74c3c;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                visibility: hidden;
+            }
+            
+            .form-control.error small {
+                visibility: visible;
+            }
+        </style>
 
-    </style>
-    <script src="app.js"></script>
+        <script src="nav.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
