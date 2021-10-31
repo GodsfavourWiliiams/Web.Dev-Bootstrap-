@@ -458,9 +458,9 @@
                                 position: fixed;
                                 top: var(--header-height);
                                 right: -100%;
-                                width: 85%;
+                                width: 70%;
                                 height: 100vh;
-                                background-color: #49AD09;
+                                background-color: #fff;
                                 transition: 1s;
                             }
                             .specification {
@@ -481,7 +481,7 @@
                             }
                             .nav__list li {
                                 position: relative;
-                                color: #fff;
+                                color: rgb(255, 66, 66);
                                 padding: 22px;
                                 border-bottom: #fff 3px solid;
                                 text-align: center;
@@ -499,7 +499,7 @@
                         
                         .nav__link {
                             position: relative;
-                            color: #fff;
+                            color: #49AD09;
                             font-size: 17px;
                         }
                         

@@ -54,6 +54,7 @@ window.onclick = function(event) {
 
 navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
+    body.style.overflow = "hidden"
 });
 /*===== MENU SHOW =====*/
 
@@ -64,7 +65,7 @@ const showMenu = (toggleId, navId) => {
     if (toggle && nav) {
         toggle.addEventListener('click', () => {
             nav.classList.toggle('show')
-
+            body.style.overflow = "visible"
 
         })
     }
@@ -82,6 +83,7 @@ function linkAction() {
     /*Remove menu mobile*/
     const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show')
+
 
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
