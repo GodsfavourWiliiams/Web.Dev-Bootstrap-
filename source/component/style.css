@@ -493,11 +493,6 @@
                             }
                         }
                         
-                        li:hover {
-                            text-decoration: none;
-                            color: black;
-                        }
-                        
                         .nav__link {
                             position: relative;
                             color: #49AD09;
