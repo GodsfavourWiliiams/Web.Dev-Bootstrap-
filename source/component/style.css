@@ -362,11 +362,13 @@
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: center;
+                                gap: 10em;
                             }
                             .footer-content {
                                 display: flex;
                                 flex-direction: column;
                                 text-align: center;
+                                margin-top: 20px;
                             }
                         }
                         
@@ -462,7 +464,7 @@
                                 height: 100vh;
                                 background-color: #fff;
                                 transition: 1s;
-                                z-index: 100000;
+                                z-index: 10000;
                             }
                             .specification {
                                 display: flex;
@@ -477,7 +479,7 @@
                                 cursor: pointer;
                                 font-size: 20px;
                                 position: relative;
-                                width: 70%;
+                                width: 75%;
                                 margin: auto;
                             }
                             .nav__list li {
@@ -486,10 +488,14 @@
                                 padding: 22px;
                                 border-bottom: #fff 3px solid;
                                 text-align: center;
-                                top: 50px;
+                                top: 30px;
+                                right: 10px;
                             }
                             .nav__list li :hover {
                                 font-size: 20px;
+                            }
+                            .footer-content>.footer-section:nth-child(2) {
+                                margin: 50px 0px;
                             }
                         }
                         
@@ -590,4 +596,8 @@
                         
                         #navMenu.active>span:nth-child(3) {
                             transform: translateY(-19px)rotate(90deg);
+                        }
+                        
+                        #contact {
+                            margin: 90px 100px;
                         }
