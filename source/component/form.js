@@ -94,6 +94,25 @@ var showPassword = document.getElementById("showPassword");
 var hidePassword = document.getElementById("hidePassword");
 var showPasswordTwo = document.getElementById("showPassword2");
 var hidePasswordTwo = document.getElementById("hidePassword2");
+const showLoginPassword = document.getElementById("showLoginPassword");
+const hideLoginPassword = document.getElementById("hideLoginPassword");
+
+hideLoginPassword.addEventListener("click", () => {
+    const x = document.getElementById("Loginpassword");
+    if (x.type == "password") {
+        x.type = "text";
+        showLoginPassword.style.display = "block";
+        hideLoginPassword.style.display = "none";
+    } else {
+        x.type =
+            "password"
+
+    }
+});
+showLoginPassword.addEventListener("click", () => {
+    showLoginPassword.style.display = "none";
+    hideLoginPassword.style.display = "block";
+});
 
 hidePassword.addEventListener("click", () => {
     var x = document.getElementById("password");
