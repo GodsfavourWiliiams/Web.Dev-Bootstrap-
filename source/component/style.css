@@ -265,7 +265,6 @@
                         }
                         
                         .parent {
-                            height: 30em;
                             background-color: #F2F2F2;
                         }
                         
@@ -306,11 +305,8 @@
                             }
                         }
                         
-                        @media only screen and (max-width:750px) {}
-                        
                         .section-4 {
-                            position: relative;
-                            top: 7em;
+                            margin: 120px 0px;
                         }
                         
                          :root {
