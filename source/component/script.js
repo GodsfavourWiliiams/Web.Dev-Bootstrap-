@@ -36,21 +36,21 @@ close_btn.addEventListener('click', () => {
 // });
 // When the user clicks on <span> (x), close the modal
 
-span.addEventListener("click", () => {
-    modal.style.display = "none";
-    body.style.overflow = "visible"
-});
+// span.addEventListener("click", () => {
+//     modal.style.display = "none";
+//     body.style.overflow = "visible"
+// });
 // showError when inputs is empty or zero
 
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        body.style.overflow = "visible"
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//         body.style.overflow = "visible"
 
-    }
-};
+//     }
+// };
 
 navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
